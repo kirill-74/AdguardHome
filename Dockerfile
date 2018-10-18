@@ -8,8 +8,7 @@ ADD AdGuardHome /AdGuard/AdGuardHome
 
 VOLUME ["/AdGuard"]
 
-RUN chmod 777 /AdGuard
-RUN chmod -Rf 0777 /AdGuard/AdGuard
+RUN chmod -R 0777 /AdGuard
 
 CMD ["/AdGuard/AdGuard"]
 
