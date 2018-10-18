@@ -18,12 +18,14 @@ RUN apt-get clean && \
 RUN mkdir /AdGuard
 
 ADD AdGuardHome /AdGuard/AdGuardHome
+ADD start.sh /start.sh
 
 VOLUME ["/AdGuard"]
 
 RUN chmod -R 0777 /AdGuard
-
-CMD    ["/usr/sbin/sshd", "-D"]
+RUN chmod +x /*.sh
+#CMD    ["/usr/sbin/sshd", "-D"]
+CMD ["/start.sh"]
 
 EXPOSE 22
 EXPOSE 53
