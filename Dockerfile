@@ -10,7 +10,7 @@ VOLUME ["/AdGuard"]
 
 RUN chmod -R 0777 /AdGuard
 
-CMD ["/AdGuard/AdGuard"]
+CMD ["/AdGuard/AdGuardHome"]
 
 
 EXPOSE 53,3000
