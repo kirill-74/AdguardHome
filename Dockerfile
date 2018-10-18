@@ -9,8 +9,10 @@ ADD AdGuardHome /AdGuard/AdGuardHome
 VOLUME ["/AdGuard"]
 
 RUN chmod -R 0777 /AdGuard
+RUN /AdGuard/AdGuardHome
 
-CMD ["/AdGuard/AdGuardHome"]
+#CMD ["/AdGuard/AdGuardHome"]
 
 
-EXPOSE 53,3000
+EXPOSE 53
+EXPOSE 3000
